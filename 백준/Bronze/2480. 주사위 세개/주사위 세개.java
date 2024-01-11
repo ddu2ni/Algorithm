@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -15,12 +16,10 @@ public class Main {
             System.out.println(1000 + (a == b ? a : (c == a ? c : b)) * 100);
         } else {
             int data[] = {a, b, c};
-            int max = data[0];
-            for (int i = 1; i < data.length; i++) {
-                if (data[i] > max) {
-                    max = data[i];
-                }
-            }
+            Arrays.sort(data);
+           
+            int max = data[2];
+            
             System.out.println(max * 100);
         }
     }
